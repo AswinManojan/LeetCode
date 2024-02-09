@@ -6,9 +6,8 @@ func frequencySort(s string) string {
 	}
 	sortedKeys := sortByValue(mp)
 	for _, x := range sortedKeys {
-		for i := 0; i < mp[x]; i++ {
-			result = result + string(x)
-		}
+		r := strings.Repeat(string(x), mp[x])
+		result+=r
 	}
     return result
 }
