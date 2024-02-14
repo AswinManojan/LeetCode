@@ -1,21 +1,14 @@
 func rearrangeArray(nums []int) []int {
-    var arr []int
-    var i,j=0,0
-    for k:=0;k<len(nums)/2;k++{
-        for ;i<len(nums);i++{
-            if nums[i]>0{
-                arr=append(arr,nums[i])
-                i++
-                break
-            }
-        }
-        for ;j<len(nums);j++{
-            if nums[j]<0{
-                arr=append(arr,nums[j])
-                j++
-                break
-            }
-        }
+    arr:= make([]int,len(nums))
+    neg,pos:= 1,0
+    for i:=0;i<len(nums);i++{
+       if nums[i]>0{
+           arr[pos]=nums[i]
+           pos+=2
+       }else{
+           arr[neg]=nums[i]
+           neg+=2
+       }
     }
     return arr
 }
