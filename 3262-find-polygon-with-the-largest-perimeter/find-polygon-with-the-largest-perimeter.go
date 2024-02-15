@@ -15,7 +15,6 @@ func largestPerimeter(nums []int) int64 {
         j:=0
         flag:=false
         flag2:=false
-        // flag3:=false
         sum2:=sum
         for ;i<len(nums);i++{
             if sum>nums[i] ||sum2>nums[i]{
@@ -29,12 +28,10 @@ func largestPerimeter(nums []int) int64 {
                 sum2+=nums[i]
                 if !flag2{
                     j=i
-                    // flag3=true
                 }
                 flag2=true
             }
         }
-        fmt.Println(j)
         if j==3 && flag2{
             if flag {
                 return int64(sum)
