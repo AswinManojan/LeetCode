@@ -1,8 +1,6 @@
 func largestPerimeter(nums []int) int64 {
     sort.Ints(nums)
-    if len(nums)<3{
-        return -1
-    }else if len(nums)==3{
+    if len(nums)==3{
         if nums[0]+nums[1]<=nums[2]{
             return -1
         }else{
