@@ -10,7 +10,6 @@ func maxFrequencyElements(nums []int) int {
     sort.Slice(arr,func(i,j int)bool{
         return mp[arr[j]]<mp[arr[i]]
     })
-    fmt.Println(arr)
     val:=mp[arr[0]]
     sum:=mp[arr[0]]
     for i:=1;i<len(arr);i++{
